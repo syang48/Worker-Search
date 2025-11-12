@@ -125,7 +125,7 @@ function handleRefreshData() {
     selectedItems.clear();
     loadingIndicator.style.display = 'block';
     updateStatusIndicator();
-    lastRefreshTimeSpan.textContent = `Last refresh: Fetching...`;
+    lastRefreshTimeSpan.textContent = `Refresh: Fetching...`;
 
     // Simulate a network fetch using setTimeout
     setTimeout(() => {
