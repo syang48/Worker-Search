@@ -1,0 +1,231 @@
+/* Global & Centering Styles */
+body {
+    /* Use Flexbox to center the content block */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Keeps content near the top */
+    min-height: 100vh; /* Full viewport height for centering */
+    padding: 20px;
+    margin: 0;
+    background-color: #f0f0f0; /* Light gray background */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Main Application Container (The "Card") */
+#app-container {
+    width: 100%;
+    max-width: 450px; /* Fixed width for the card */
+    padding: 15px;
+    background-color: #ffffff; /* White card background */
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-sizing: border-box;
+}
+
+h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+/* Input and Action Bar */
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#actions {
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+/* Styles moved from index.html */
+.category-actions {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#checkboxModeToggle {
+    margin-left: 5px;
+}
+
+#loading {
+    color: gray;
+    text-align: center;
+    margin-top: 10px;
+    display: none;
+}
+
+/* Buttons (General) */
+button {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.15s;
+}
+button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Specific Button Colors */
+#refreshDataBtn {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+#refreshDataBtn:hover {
+    background-color: #c3e6cb;
+}
+
+.multi-copy-btn {
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 20px;
+}
+
+.multi-copy-btn {
+    background-color: #e9ecef;
+    border-color: #ced4da;
+    color: #495057;
+}
+.multi-copy-btn:hover {
+    background-color: #ced4da;
+}
+
+/* Last Refresh and Order Mode */
+#lastRefreshTime {
+    font-size: 11px;
+    color: #555;
+    margin-right: 10px;
+}
+
+#modeToggleContainer {
+    margin-left: auto; /* Pushes to the far right */
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #555;
+    padding-left: 10px;
+    border-left: 1px solid #eee;
+}
+
+/* Status and Results List */
+#selection-status {
+    font-size: 12px;
+    color: #007bff;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+#resultsList {
+    max-height: 700px; /* Longer list */
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+/* Individual Result Item */
+.result-item {
+    border-bottom: 1px solid #eee;
+    padding: 10px 8px;
+    font-size: 13px;
+    display: flex;
+    align-items: flex-start;
+    transition: background-color 0.15s, border-left 0.15s;
+}
+.result-item:last-child {
+    border-bottom: none;
+}
+.result-item:hover { background-color: #f9f9f9; }
+.result-item.selected {
+    background-color: #e7f5ff;
+    border-left: 4px solid #007bff;
+    padding-left: 4px;
+}
+
+.checkbox-container {
+    padding-right: 10px;
+    padding-top: 2px;
+    flex-shrink: 0;
+}
+
+/* UPDATED STYLES START HERE */
+
+.data-content {
+    flex-grow: 1;
+    padding: 0 10px;
+}
+
+/* New Status Header */
+.status-header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 4px;
+    margin-bottom: 8px;
+    line-height: 1;
+}
+
+/* New 2-Column Grid */
+.data-grid {
+    display: grid;
+    grid-template-columns: 70px 1fr; /* 70px for labels, rest for values */
+    gap: 6px 10px; /* 6px row gap, 10px column gap */
+    line-height: 1.4;
+}
+
+/* Labels and Values */
+.data-grid strong {
+    font-weight: bold;
+    text-align: right;
+}
+
+.copyable-value {
+    cursor: pointer;
+    text-align: left;
+    transition: color 0.15s;
+    word-break: break-all; /* Prevents long values from overflowing */
+}
+.copyable-value:hover {
+    text-decoration: underline;
+    color: #007bff;
+}
+
+/* Status Styling (Unchanged, still works) */
+.status-online { color: green; font-weight: bold; }
+.status-degraded { color: orange; font-weight: bold; }
+.status-offline { color: red; font-weight: bold; }
+
+/* Copy success confirmation */
+#copySuccess {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    z-index: 10000;
+    transition: opacity 0.5s;
+    opacity: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
