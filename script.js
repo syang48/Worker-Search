@@ -99,9 +99,9 @@ function formatTimeAgo(timestamp) {
 
 function updateLastRefreshTimeDisplay() {
     if (lastTimestamp) {
-        lastRefreshTimeSpan.textContent = `Last refresh: ${formatTimeAgo(lastTimestamp)}`;
+        lastRefreshTimeSpan.textContent = `Refresh: ${formatTimeAgo(lastTimestamp)}`;
     } else {
-        lastRefreshTimeSpan.textContent = `Last refresh: Never`;
+        lastRefreshTimeSpan.textContent = `Refresh: Never`;
     }
 }
 
