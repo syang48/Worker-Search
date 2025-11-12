@@ -54,7 +54,8 @@ Clone or Download the Repository:
 
 Bash
 
-git clone 
+git clone https://github.com/syang48/Worker-Search.git
 (Or, you can download the project as a ZIP file and extract it.)
 
 Open the File: Navigate to the project folder and double-click the index.html file to open it in your web browser.
+
