@@ -1,4 +1,7 @@
 Worker Search
+
+https://syang48.github.io/Worker-Search/
+
 A simple, client-side search and filter tool for viewing worker statuses and copying relevant data. Built with vanilla HTML, CSS, and JavaScript.
 
 (Replace the link above with your own GitHub Pages link after you deploy it!)
