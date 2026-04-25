@@ -1,0 +1,22 @@
+name: Deploy Legacy Site to Pages
+
+on:
+  push:
+    branches:
+      - main  # Runs every time you push to the main branch
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: legacy-v1  # The folder you want to host
+          branch: gh-pages   # The branch the static site will live on
