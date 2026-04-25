@@ -6,7 +6,7 @@
 
 ## 🚀 Live Deployments
 
-* **Production (v2):** [View Live App](https://fleet-watch-v2.vercel.app) — *Built with Next.js, React, & MongoDB Atlas.*
+* **Modern Version (v2):** [View Live App](https://fleet-watch-v2.vercel.app) — *Built with Next.js, React, & MongoDB Atlas.*
 * **Legacy Prototype (v1):** [View Comparison](https://sampsonyang.github.io/fleet-watch-v2/) — *Static HTML/JS prototype.*
 
 ---
@@ -20,7 +20,7 @@ This project marks a complete migration from a "mock data" architecture to a per
 | Feature | Legacy Version (`v1`) | Modern Version (`v2`) |
 | :--- | :--- | :--- |
 | **Tech Stack** | Vanilla HTML / CSS / JS | **Next.js 15 / React / TypeScript** |
-| **Data Engine** | Static `sample-data.ts` | **Live MongoDB Atlas Database** |
+| **Data Engine** | Static `sample-data.js` | **Live MongoDB Atlas Database** |
 | **Styling** | Custom CSS | **Tailwind CSS (Utility-First)** |
 | **Backend** | N/A | **Next.js Serverless API Routes** |
 | **Search Logic** | Simple string match | **Multi-term space-separated filtering** |
