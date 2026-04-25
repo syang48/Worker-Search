@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FleetWatch v2",
+  title: "FleetWatch",
   description: "IT Asset Management Dashboard",
 };
 
